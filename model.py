@@ -7,7 +7,7 @@ class Company(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String())
-    phone = db.Column(db.Integer())
+    phone = db.Column(db.String())
     address = db.Column(db.String())
 
     def __init__(self, name, phone, address):
