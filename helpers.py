@@ -1,5 +1,4 @@
 from flask import request
-from model import Company
 
 def is_null(company: object) -> str:
     name = [company.name if request.form['name'] is '' else request.form['name']]

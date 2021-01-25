@@ -21,7 +21,7 @@ def add():
                           request.form['phone'])
         db.session.add(company)
         db.session.commit()
-
+        # flash('Adicionado com sucesso!')
         return redirect(url_for('init'))
     else:
         return render_template('add.html')

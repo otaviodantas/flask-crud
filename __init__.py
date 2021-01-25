@@ -1,9 +1,10 @@
 from flask import Flask
 from model import db
-from env import PATH_URI_BD
+from env import PATH_URI_BD, SECRET_KEY
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = PATH_URI_BD
+app.secret_key = SECRET_KEY
 
 db.init_app(app)
 
